@@ -27,42 +27,42 @@ document.addEventListener("DOMContentLoaded",()=>{
   const playRound = (userChoice) => {
     const computerChoice = getComputerChoice()
       if (userChoice === computerChoice) {
-        message.innerText=`draw, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+        message.textContent=`draw, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
         message.style.height = "10vh"
         // console.log("draw");
       }
     else if (userChoice === "rock" && computerChoice === "paper") {
       computerScore++
-  message.innerText=`lost, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+  message.textContent=`lost, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
   message.style.height = "10vh"
   // console.log("draw");
     } else if (userChoice === "paper" && computerChoice === "rock") {
       humanScore++
-    message.innerText=`won, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+    message.textContent=`won, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
     message.style.height = "10vh"
     // console.log("draw");
     
     } else if (userChoice === "scissor" && computerChoice === "rock") {
       computerScore++
-   message.innerText=`lost, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+   message.textContent=`lost, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
    message.style.height = "10vh"
    // console.log("draw");
    
     } else if (userChoice === "rock" && computerChoice === "scissor") {
       humanScore++
-      message.innerText=`won, your score is ${humanScore} and computer score is ${computerScore}\n your choice is ${userChoice} and computer choice is ${computerChoice}`
+      message.textContent=`won, your score is ${humanScore} and computer score is ${computerScore}\n your choice is ${userChoice} and computer choice is ${computerChoice}`
       message.style.height = "10vh"
       // console.log("draw");
       
     } else if (userChoice === "paper" && computerChoice === "scissor") {
       computerScore++
-      message.innerText=`lost, your score is ${humanScore} and computer score is ${computerScore}\n your choice is ${userChoice} and computer choice is ${computerChoice}`
+      message.textContent=`lost, your score is ${humanScore} and computer score is ${computerScore}\n your choice is ${userChoice} and computer choice is ${computerChoice}`
       message.style.height = "10vh"
       // console.log("draw");;
       
     } else if  (userChoice === "scissor" && computerChoice === "paper") {
       humanScore++
-     message.innerText=`won, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+     message.textContent=`won, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
      message.style.height = "10vh"
         // console.log("draw");
      
