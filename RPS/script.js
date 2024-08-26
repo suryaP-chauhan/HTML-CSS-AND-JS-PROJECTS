@@ -1,5 +1,6 @@
-console.log("hello");
-
+// console.log("hello");
+const buttons = document.querySelectorAll("Button")
+const message = document.getElementById("outcome")
 
 
 const getComputerChoice = () => {
@@ -20,71 +21,68 @@ const getComputerChoice = () => {
   
 };
 
-
-const getHumanChoice = () => {
-  const person = prompt("make a choice between rock,paper or scissor");
-  if (
-    person.toLowerCase() !== "rock" &&
-    person.toLowerCase() !== "scissor" &&
-    person.toLowerCase() !== "paper"
-  ) {
-    alert("enter valid choice")
-  } else {
-    console.log(person.toLowerCase());
+document.addEventListener("DOMContentLoaded",()=>{
+  let humanScore = 0;
+  let computerScore = 0;
+  const playRound = (userChoice) => {
+    const computerChoice = getComputerChoice()
+      if (userChoice === computerChoice) {
+        message.innerText=`draw, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+        message.style.height = "10vh"
+        // console.log("draw");
+      }
+    else if (userChoice === "rock" && computerChoice === "paper") {
+      computerScore++
+  message.innerText=`lost, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+  message.style.height = "10vh"
+  // console.log("draw");
+    } else if (userChoice === "paper" && computerChoice === "rock") {
+      humanScore++
+    message.innerText=`won, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+    message.style.height = "10vh"
+    // console.log("draw");
     
-    return person.toLowerCase()
-  }
-};
-
-let humanScore = 0;
-let computerScore = 0;
-const playRound = (humanChoice, computerChoice) => {
-    if (humanChoice === computerChoice) {
-        console.log("draw");
+    } else if (userChoice === "scissor" && computerChoice === "rock") {
+      computerScore++
+   message.innerText=`lost, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+   message.style.height = "10vh"
+   // console.log("draw");
+   
+    } else if (userChoice === "rock" && computerChoice === "scissor") {
+      humanScore++
+      message.innerText=`won, your score is ${humanScore} and computer score is ${computerScore}\n your choice is ${userChoice} and computer choice is ${computerChoice}`
+      message.style.height = "10vh"
+      // console.log("draw");
+      
+    } else if (userChoice === "paper" && computerChoice === "scissor") {
+      computerScore++
+      message.innerText=`lost, your score is ${humanScore} and computer score is ${computerScore}\n your choice is ${userChoice} and computer choice is ${computerChoice}`
+      message.style.height = "10vh"
+      // console.log("draw");;
+      
+    } else if  (userChoice === "scissor" && computerChoice === "paper") {
+      humanScore++
+     message.innerText=`won, your score is ${humanScore} and computer score is ${computerScore} \n your choice is ${userChoice} and computer choice is ${computerChoice}`
+     message.style.height = "10vh"
+        // console.log("draw");
+     
     }
-  else if (humanChoice === "rock" && computerChoice === "paper") {
-    computerScore++
-    console.log("you lost");
-  } else if (humanChoice === "paper" && computerChoice === "rock") {
-    humanScore++
-    console.log("you won");
-  } else if (humanChoice === "scissor" && computerChoice === "rock") {
-    computerScore++
-    console.log("you lost");
-  } else if (humanChoice === "rock" && computerChoice === "scissor") {
-    humanScore++
-    console.log("you won");
-  } else if (humanChoice === "paper" && computerChoice === "scissor") {
-    computerScore++
-    console.log("you lost");
-  } else if  (humanChoice === "scissor" && computerChoice === "paper") {
-    humanScore++
-    console.log("you won");
-  }
-    else {
-      console.log("invalid input");
-
-    }
-    console.log(`human score is ${humanScore}`);
-    console.log(`computer score is ${computerScore}`);
-};
+      else {
+        console.log("invalid input");
+  
+      }
+     
+  };
+  
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const userChoice = button.value;
+      playRound(userChoice);
+    });
+  });
+      
+  
+  
+})
 
 
-const playGame = () => {
-   for(let i=1; i<=5; i++){
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection)
-   }
-}
-playGame()
-
-if(humanScore> computerScore){
-    console.log("you won the game");
-    
-}else if(humanScore === computerScore){
-    console.log("game draw");
-}else{
-    console.log("you lost the game");
-    
-}
