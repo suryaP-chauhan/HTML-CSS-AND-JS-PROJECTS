@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp-Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class = "container">
+        <div class="left">
+         <div >
+            <img class="img" src="https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+           
+         </div>
+         <div class="back">
+            <img class="im" src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="">
+            <h1 class="text">ODIN</h1>
+         </div>
+           
+        </div>
+        <div class="right">
+           <div>
+            <h1>This is not real online service! You know you need something like this in your life to help you realize your deepest dreams. <br> Sign up now to get started <br> You know you want to.</h1>
+
+            <form id="form" action="">
+                <h2>Let's do this!</h2>
+                <label for="name">Name</label>
+                <input type="text" name="" id="name" maxlength="20" placeholder="name" required> <br>
+                <label for="last">Last-Name</label>
+                <input type="text" id="last" placeholder="last-name" maxlength="20" required> <br>
+                <label for="email">email</label>
+                <input type="email" name="" id="email" required placeholder="email"> <br>
+                <label for="number">Number</label> 
+                <input type="text" maxlength="10" id="number" placeholder="contact no." required> <br>
+                <label for="password">Password</label>
+                <input type="password" name="" id="password" placeholder="password" maxlength="20" required> <br>
+                <span id="val"></span>
+                <label for="cpass">Confirm Password</label>
+                <input type="password" name="" id="cpass" placeholder="confirm-password" maxlength="20" required>
+                <button type="submit">Create Account</button>
+                <h2>Already have an account? <a href="">Login</a></h2>
+            </form>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
