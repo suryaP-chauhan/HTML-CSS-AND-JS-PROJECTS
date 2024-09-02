@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="upper">
+        <h1 style="font-size: 100px; margin-top: 30px">Library</h1>
+        <div style="margin-top: 30px" class="inner">
+          <div>
+            <label style="font-size: 30px" for="title">Title</label>
+            <input
+              style="font-size: 30px"
+              type="text"
+              id="title"
+              placeholder="title"
+              required
+            />
+            <label style="font-size: 30px" for="author">Author</label>
+            <input
+              style="font-size: 30px"
+              type="text"
+              id="author"
+              placeholder="author"
+              required
+            />
+            <label style="font-size: 30px" for="pages">Pages</label>
+            <input
+              style="font-size: 30px"
+              type="number"
+              id="pages"
+              placeholder="pages"
+              required
+            />
+          </div>
+          <div>
+            <h2 style="margin-top: 20px">
+              Read! <input type="checkbox" name="" id="check" />
+            </h2>
+          </div>
+          <div
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <button id="button" class="button">Add</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="display" class="display"></div>
+    </div>
+  </body>
+</html>
